@@ -1,0 +1,87 @@
+.banniere{
+    width: 80%;
+    margin: auto;
+}
+
+.worker-img{
+    height: 543px;
+    width: 390px;
+    object-fit: contain;
+}
+
+.banniere{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.section-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main-slogan{
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 121%;
+    width: 80%;  
+}
+.second-slogan{
+    font-size: 24px;
+    font-weight: 500;
+    color: #999;
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+.a-propos-btn{
+    width: 225px;
+    height: 58px;
+    font-size: 24px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0B5EDB;
+    color: white;
+    cursor: pointer;
+    box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    margin-bottom: 40px;
+    transition: all 0.5s;
+}
+.a-propos-btn:hover{
+    background-color: white;
+    color: #0B5EDB;
+}
+.separateur{
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+    background-color: #0B5EDB;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.separateur h1{
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 103%;
+    letter-spacing: 9.5%;
+}
+.separateur h2 {
+    color: #c4c4c4;
+    font-size: 28px;
+    font-weight: 200;
+    letter-spacing: 14%;
+}
+.triangle{
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-top: 50px solid #0B5EDB;
+    position: absolute;
+    bottom: -50px;
+}
