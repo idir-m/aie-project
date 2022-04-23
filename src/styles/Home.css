@@ -36,7 +36,7 @@
     width: 225px;
     height: 58px;
     font-size: 24px;
-    font-weight: 500;
+    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,4 +84,12 @@
     border-top: 50px solid #0B5EDB;
     position: absolute;
     bottom: -50px;
+}
+
+.comments{
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
 }

@@ -33,12 +33,12 @@
 .header-left ul li:nth-child(1){
     margin-left: 0;
 }
-.header-left span {
-    cursor: pointer;
+.header-left a {
+    text-decoration: none;
     color: #000;
     transition: all 0.2s;
 }
-.header-left span:hover{
+.header-left a:hover{
     color: rgba(0, 0, 0, 0.5);
 }
 .header-right{

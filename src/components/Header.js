@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/Header.css'
+import { Link } from 'react-router-dom'
 
 function Header() {
   return (
@@ -8,9 +9,9 @@ function Header() {
         <div className='header-left'>
           <div className='logo'>CoNet</div>
           <ul>
-              <li><span>Accueil</span></li>
-              <li><span>Nos Services</span></li>
-              <li><span>Se connecter</span></li>
+              <li><Link to="/">Accueil</Link></li>
+              <li><Link to="Services">Nos Services</Link></li>
+              <li><Link to="Login">Se connecter</Link></li>
           </ul>
         </div>
         <div className='header-right'>
