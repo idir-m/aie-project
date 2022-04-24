@@ -1,6 +1,9 @@
 .banniere{
     width: 80%;
     margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .worker-img{
@@ -9,11 +12,6 @@
     object-fit: contain;
 }
 
-.banniere{
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-}
 .section-left{
     display: flex;
     flex-direction: column;

@@ -1,0 +1,14 @@
+.entreprise-img{
+    height: 220px;
+	width: 220px;
+	border-radius: 20px;
+	object-fit: cover;
+}
+.offre-itm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: cadetblue;
+    margin: 5px;
+}
