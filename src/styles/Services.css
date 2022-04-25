@@ -45,13 +45,16 @@
     width: 80%;
     margin: auto;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .vitrine-offres{
     width: 80%;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 70px;
+    margin-bottom: 70px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;

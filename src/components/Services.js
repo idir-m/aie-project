@@ -2,10 +2,22 @@ import React from 'react'
 import '../styles/Services.css'
 import OffreItem from './OffreItem'
 import { offresList } from '../datas/offresList'
-
+import Categories from './Categories'
+import { useState } from 'react'
+import Footer from './Footer'
 
 
 function Services() {
+
+   const [categorie, updateCategorie] = useState('vitre')
+   
+   const filtredOffresList = offresList.filter(
+     (offre) => offre.category === categorie 
+      );
+
+   
+
+
   return (
     <div>
       <section className='services-banniere'>
@@ -48,8 +60,19 @@ function Services() {
 
       </section>
 
+      <div className='separateur'>
+      <h1>Vous avez le choix parmis les meilleurs entreprises en Algérie</h1>
+      <h2>Vous n'avez qu'à choisir une catégorie !</h2>
+      
+    </div>
+
+      <Categories
+         categorie={categorie}
+         updateCategorie={updateCategorie}
+      />
+
       <section className='offres'>
-        {offresList.map(({id, photo, nom, wilaya, prix, description}) => (
+        {filtredOffresList.map(({id, photo, nom, wilaya, prix, description}) => (
           <div key={id}>
               <OffreItem
                id={id}
@@ -60,9 +83,11 @@ function Services() {
                description={description}
            />
           </div>
-        ))}
-           
+        ))}  
       </section>
+
+      <Footer />
+
     </div>
   )
 }
