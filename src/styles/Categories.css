@@ -6,7 +6,7 @@
     text-align: center;
 }
 
-select{
+.select-cat{
     box-shadow: 4px 4px 2px rgba(0, 0  , 0, 0.25);
     font-size: 1.5rem;
     padding: 0.9em 1.5em;
@@ -20,7 +20,7 @@ select{
     transition: all 0.2s;
 }
 
-select:hover{
+.select-cat:hover{
     background-color: whitesmoke;
     color: #0B5EDB;
 }

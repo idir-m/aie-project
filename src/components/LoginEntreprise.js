@@ -1,16 +1,17 @@
-import React, {  useState } from "react";
+import React, { useContext, useState } from "react";
 import '../styles/login.css'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
+import AuthContext from "../context/AuthProvider";
 import axios from "../axios/axios";
-import useAuth from "../hooks/useAuth";
 
-function Login() {
+function LoginEntreprise() {
 
- const { setAuth } = useAuth();
+ const { setAuth } = useContext(AuthContext);
 
  const navigate = useNavigate();
  const location = useLocation();
  const from = location.state?.from?.pathname || "/" ;
+
 
  const [userEmail, setUserEmail] = useState('');
  const [pwd, setPwd] = useState('');
@@ -19,7 +20,7 @@ function Login() {
  const handleSubmit = async (e) => {
    e.preventDefault();
      try {
-       const response = await axios.post('/api/auth/login',
+       const response = await axios.post('/api/auth/login/entreprise',
                 {
                   email: userEmail,
                   password: pwd
@@ -35,6 +36,8 @@ function Login() {
 
        setUserEmail('');
        setPwd('');
+
+       console.log(from);
        
        navigate(from, { replace: true })
 
@@ -49,7 +52,7 @@ function Login() {
   
   
     <div className="center">
-      <h1>Connexion</h1>
+      <h1>Connexion (Pour entreprise)</h1>
       <form onSubmit={handleSubmit}>
 
         <div className="txt_field">
@@ -75,17 +78,15 @@ function Login() {
           <label htmlFor="password">Mot de passe</label>
         </div>
         
-        <button className="submitBtn">Se connecter</button>
+        <button className="submitBtn">Se connecter </button>
       </form>
       <div className="signup_link">
-          Pas un membre? <Link to='/inscriptionClient'> S'inscrire</Link>
+          Créer un copmte <Link to='/inscription'> S'inscrire</Link>
         </div>
-        <div className="signup_link">
-          Vous êtes une entreprise? <Link to='/LoginEntreprise'> par içi</Link>
-        </div>
+        
     </div>
     
   );
 }
 
-export default Login;
+export default LoginEntreprise;

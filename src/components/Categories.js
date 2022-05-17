@@ -16,7 +16,7 @@ function Categories({categorie, updateCategorie}) {
     }
   return (
     <div className='categorie-main-div'>
-        <select name='categories' value={categorie} onChange={selectedValue}>
+        <select className='select-cat' name='categories' value={categorie} onChange={selectedValue}>
             {categories.map((cat) => (
                 <option key={cat} value={cat}>{cat}</option>
             ))}  

@@ -1,0 +1,45 @@
+/*
+.form-ajout-service{
+	background-color: whitesmoke;
+	padding: 10px;
+	width: 30%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 1px 1px 10px black;
+	border-radius: 10px;
+
+}
+.input-service{
+	width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: none;
+	border-radius: 8px;
+	padding: 3px;
+}
+input[type=submit]{
+	margin: 5px;
+	border-style: none;
+	width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+	color: #0B5EDB;
+    background-color: #fff;
+	font-weight: bold;
+
+
+}
+*/
+.wrap-service-form{
+	width: 80%;
+	margin: auto;
+}
+.form-ajout-service{
+	font-size: 16px;
+	margin: 20px;
+}
+.input-service{
+	
+}

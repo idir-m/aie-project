@@ -1,21 +1,33 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../styles/Services.css'
 import OffreItem from './OffreItem'
-import { offresList } from '../datas/offresList'
 import Categories from './Categories'
 import { useState } from 'react'
 import Footer from './Footer'
+import axios from '../axios/axios'
 
 
 function Services() {
 
    const [categorie, updateCategorie] = useState('vitre')
-   
-   const filtredOffresList = offresList.filter(
-     (offre) => offre.category === categorie 
-      );
 
+   const [offresList, updateOffres] = useState([]);
    
+
+    useEffect(() => {
+      async function fetchData() {
+        const req = await axios.get('/api/services/');
+
+        updateOffres(req.data);
+      }
+      fetchData();
+    }, []);
+
+    const filtredOffresList = offresList.filter(
+      (offre) => offre.category === categorie 
+       );
+
+    
 
 
   return (
@@ -72,15 +84,15 @@ function Services() {
       />
 
       <section className='offres'>
-        {filtredOffresList.map(({id, photo, nom, wilaya, prix, description}) => (
-          <div key={id}>
+        {filtredOffresList.map(({_id, title, description, imageUrl, price, wilaya}) => (
+          <div key={_id}>
               <OffreItem
-               id={id}
-               photo={photo}
-               nom={nom}
-               wilaya={wilaya}
-               prix={prix}
+               _id={_id}
+               title={title}
                description={description}
+               imageUrl={imageUrl}
+               price={price}
+               wilaya={wilaya}
            />
           </div>
         ))}  

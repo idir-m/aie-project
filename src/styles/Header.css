@@ -46,6 +46,9 @@
     justify-content: flex-end;
     flex: 1;
 }
+.header-right a {
+    text-decoration: none;
+}
 .btn{
     font-size: 23px;
     font-weight: bold;
@@ -65,3 +68,4 @@
 background-color: #0B5EDB;
 color: white;
 }
+
