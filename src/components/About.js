@@ -37,7 +37,7 @@ function About() {
             </p>
           </div>
            <div className="inscriptionBtn">
-          <Link to="/Login"><div className='btn'>S'inscrire</div></Link> 
+          <Link to="/Login" className="inscriptionLink"><div className='btn'>S'inscrire</div></Link> 
           </div>
         
      </div>

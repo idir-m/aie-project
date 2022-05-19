@@ -1,33 +1,64 @@
 import React from "react";
 import '../styles/AjoutService.css'
+import '../styles/login.css'
+
+
 function AjoutService() {
   return (
       <div className="wrap-service-form">
-      <form className="form-ajout-service">
-          <label>Titre</label><br/>
-          <input className="input-service" type="text" required/><br/>
+      <form >
+ 
+<div className="txt_field">
+  <input 
+         type="email"
+         id="adressemail"
+         
+         onChange={(e) => setUserEmail(e.target.value)}
+         value={userEmail}
+         required/>
+  <span></span>
+  <label htmlFor="adresseMail">Adresse Email</label>
+</div>
 
-          <label>catégorie</label><br/>
-          <select className="input-service" >
-					<option value='vitre'>Nettoyage des Vitres</option>
-					<option value='entreprise'>Nettoyage des Entreprises</option>
-					<option value='domicile'>Nettoyage a Domicile</option>		
-          </select><br/>
+<div className="txt_field">
+  <input 
+         type="text"
+         id="name"
+         autoComplete="off"
+         onChange={(e) => setUserName(e.target.value)}
+         value={userName}
+         required/>
+  <span></span>
+  <label htmlFor="name">Nom de l'entreprise</label>
+</div>
 
-          <label>Prix (en Dinar)</label><br/>
-          <input className="input-service"  type="Number" required/><br/>
+<div className="txt_field">
+  <input 
+         type="text"
+         id="adress"
+         autoComplete="off"
+         onChange={(e) => setUserAdress(e.target.value)}
+         value={userAdress}
+         required/>
+  <span></span>
+  <label htmlFor="adress">Adresse</label>
+ </div>
 
-          <label>Wilaya</label><br/>
-          <input className="input-service"  type="text" required/><br/>
+<div className="txt_field">
+  <input 
+         type="password"
+         id="password"
+         onChange={(e) => setPwd(e.target.value)}
+         value={pwd} 
+         required/>
+  <span></span>
+  <label htmlFor="password">Mot de passe</label>
 
-          <label>Description</label><br/>
-          <textarea className="input-service"  name="decrire"  rows="6" cols="30"/><br/>
+</div>
 
-          <label>URL de l'image</label><br/>
-          <input className="input-service"  type="text" placeholder="http://...." required/><br/>
+<button  className="submitBtn">S'inscrire</button>
 
-          <button className="input-service" >Ajouter</button>
-      </form>
+</form>
 
       </div>
   );

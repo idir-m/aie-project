@@ -1,4 +1,67 @@
-.form-ajout-service{
-	font-size: 16px;
-	margin: 20px;
+.add-product-form{
+	
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+	margin: auto;
+	margin-bottom: 50px;
+	position: relative;
+}
+
+.add-product-form h1{
+	text-align: center;
+	padding: 20px 0;
+	border-bottom: 1px solid silver;
+  }
+
+.add-product-form form{
+	padding: 0 40px;
+	box-sizing: border-box;
+}
+
+.btns-div{
+	display: flex;
+	
+}
+
+.deleteBtn{
+	width: 50%;
+	margin: 8px 4px;
+	background-color: red;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	padding: 10px;
+	font-size: 1.2em;
+	font-weight: 400;
+	transition: all 0.2ms;
+}
+.deleteBtn:hover{
+	font-weight: 500;
+}
+.modifier{
+	background-color: green;
+}
+
+
+.aucun_service{
+	text-align: center;
+}
+
+.fermer_btn{
+	width: 80px;
+	margin: auto;
+	position: absolute;
+	top: -30px;
+	right: 0;
+	background: none;
+	background-color: white;
+	box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+	border-radius: 10px 10px 0 0;
+	font-weight: 400;
+	font-size: 20px;
+	cursor: pointer;
+	text-align: center;
+
 }

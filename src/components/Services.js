@@ -76,7 +76,7 @@ function Services() {
       <h1>Vous avez le choix parmis les meilleurs entreprises en Algérie</h1>
       <h2>Vous n'avez qu'à choisir une catégorie !</h2>
       
-    </div>
+      </div>
 
       <Categories
          categorie={categorie}

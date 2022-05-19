@@ -31,8 +31,11 @@ function LoginEntreprise() {
 
        const accesToken = response?.data?.accesToken;
        const roles = response?.data?.roles;
+       const name = response?.data?.name;
+       const userId = response?.data?.userId;
+      
        
-       setAuth({ userEmail, pwd, roles, accesToken });
+       setAuth({ name, userId, roles, accesToken });
 
        setUserEmail('');
        setPwd('');

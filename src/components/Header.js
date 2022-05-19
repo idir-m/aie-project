@@ -42,7 +42,7 @@ function Header() {
   }
 
   
-  
+  console.log(auth.userId);
   
  
 
@@ -54,7 +54,7 @@ function Header() {
           <ul>
               <li><Link to="/">Accueil</Link></li>
               <li><Link to="Services">Nos Services</Link></li>
-              <li>{ !auth?.userEmail ? <Link to="Login" >Se connecter</Link> : <Link to="/" onClick={logOut}>Se Deconnecter</Link>  } </li>       
+              <li>{ !auth?.userId ? <Link to="Login" >Se connecter</Link> : <Link to="/" onClick={logOut}>Se Deconnecter</Link>  } </li>       
           </ul>
         </div>
         
